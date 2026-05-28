@@ -32,7 +32,6 @@ import heroImg from "@/assets/hero-island.jpg";
 import owcImg from "@/assets/owc.jpg";
 import windImg from "@/assets/wind.jpg";
 import biodsscImg from "@/assets/biodssc.jpg";
-import logoImg from "@/assets/Logo.png";
 import paperPdf from "@/assets/Paper_5thIYS_Muhammad Pandu Pradana_Brawijaya University_Indonesia_KALAOTOA RISE_ A.pdf";
 import posterImg from "@/assets/Poster.png";
 
@@ -127,14 +126,8 @@ function Nav() {
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
         <a href="#top" className="flex items-center gap-2 font-bold tracking-tight">
-          <span className="grid h-11 w-11 place-items-center overflow-hidden rounded-xl bg-gradient-to-br from-primary to-secondary">
-            <img
-              src={logoImg}
-              alt="KALAOTOA RISE logo"
-              className="h-full w-full object-contain p-1.5"
-              loading="eager"
-              decoding="async"
-            />
+          <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-primary to-secondary text-primary-foreground">
+            <Waves className="h-4 w-4" />
           </span>
           <span className="text-base">
             KALAOTOA<span className="text-primary"> RISE</span>
