@@ -54,9 +54,9 @@ export const Route = createFileRoute("/")({
 });
 
 const ENERGY_SOURCES = [
-  { key: "owc", name: "OWC (Wave)", min: 105000, max: 158000, color: "var(--chart-1)" },
-  { key: "wind", name: "HAWT + VAWT (Wind)", min: 210000, max: 300000, color: "var(--chart-2)" },
-  { key: "biodssc", name: "Bio-DSSC (Solar)", min: 30000, max: 45000, color: "var(--chart-3)" },
+  { key: "owc", name: "OWC (Wave)", min: 105000, max: 158000, color: "oklch(0.5 0.17 240)" },
+  { key: "wind", name: "HAWT + VAWT (Wind)", min: 210000, max: 300000, color: "oklch(0.62 0.16 155)" },
+  { key: "biodssc", name: "Bio-DSSC (Solar)", min: 30000, max: 45000, color: "oklch(0.78 0.16 70)" },
 ] as const;
 
 function Index() {
