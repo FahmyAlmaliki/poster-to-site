@@ -431,7 +431,7 @@ function Calculator({
                 />
                 <Bar dataKey="value" radius={[0, 8, 8, 0]}>
                   {data.map((d, i) => (
-                    <Cell key={i} fill={`oklch(${d.color.replace("var(--", "").replace(")", "") === "chart-1" ? "0.5 0.17 240" : d.color.replace("var(--", "").replace(")", "") === "chart-2" ? "0.62 0.16 155" : "0.78 0.16 70"})`} />
+                    <Cell key={i} fill={d.color} />
                   ))}
                 </Bar>
               </BarChart>
