@@ -378,7 +378,7 @@ function Calculator({
               <div className="flex items-center gap-3">
                 <span
                   className="h-3 w-3 rounded-full"
-                  style={{ background: `oklch(var(--${s.color.replace("var(--", "").replace(")", "")}))` }}
+                  style={{ background: s.color }}
                 />
                 <div>
                   <div className="font-semibold">{s.name}</div>
