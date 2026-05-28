@@ -393,7 +393,7 @@ function Calculator({
                 onChange={(e) =>
                   setEnabled({ ...enabled, [s.key]: e.target.checked })
                 }
-                className="h-5 w-5 accent-[oklch(var(--primary))]"
+                className="h-5 w-5 accent-[var(--primary)]"
               />
             </label>
           ))}
@@ -418,14 +418,14 @@ function Calculator({
           {data.length > 0 ? (
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={data} layout="vertical" margin={{ left: 20 }}>
-                <CartesianGrid strokeDasharray="3 3" stroke="oklch(var(--border))" />
+                <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
                 <XAxis type="number" tickFormatter={(v) => `${v / 1000}k`} />
                 <YAxis dataKey="name" type="category" width={140} />
                 <Tooltip
                   formatter={(v: number) => [`${v.toLocaleString()} kWh`, "Annual output"]}
                   contentStyle={{
-                    background: "oklch(var(--card))",
-                    border: "1px solid oklch(var(--border))",
+                    background: "var(--card)",
+                    border: "1px solid var(--border)",
                     borderRadius: 12,
                   }}
                 />
@@ -720,8 +720,8 @@ function Impact() {
               <Tooltip
                 formatter={(v: number) => `${v.toLocaleString()} kWh/yr`}
                 contentStyle={{
-                  background: "oklch(var(--card))",
-                  border: "1px solid oklch(var(--border))",
+                  background: "var(--card)",
+                  border: "1px solid var(--border)",
                   borderRadius: 12,
                 }}
               />
