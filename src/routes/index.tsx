@@ -127,11 +127,11 @@ function Nav() {
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
         <a href="#top" className="flex items-center gap-2 font-bold tracking-tight">
-          <span className="grid h-8 w-8 place-items-center overflow-hidden rounded-lg bg-gradient-to-br from-primary to-secondary">
+          <span className="grid h-11 w-11 place-items-center overflow-hidden rounded-xl bg-gradient-to-br from-primary to-secondary">
             <img
               src={logoImg}
               alt="KALAOTOA RISE logo"
-              className="h-6 w-6 object-contain"
+              className="h-full w-full object-contain p-1.5"
               loading="eager"
               decoding="async"
             />
