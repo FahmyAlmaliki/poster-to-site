@@ -32,6 +32,17 @@ import heroImg from "@/assets/hero-island.jpg";
 import owcImg from "@/assets/owc.jpg";
 import windImg from "@/assets/wind.jpg";
 import biodsscImg from "@/assets/biodssc.jpg";
+import paperPdf from "@/assets/Paper_5thIYS_Muhammad Pandu Pradana_Brawijaya University_Indonesia_KALAOTOA RISE_ A.pdf";
+import posterImg from "@/assets/Poster.png";
+
+import panduPhoto from "@/assets/Muhammad Pandu Pradana.jpeg";
+import ainaPhoto from "@/assets/'Aina Salsabila.jpeg";
+import fahmyPhoto from "@/assets/Fahmy Almaliki Dwi Aditya.jpeg";
+import nashirPhoto from "@/assets/Muhammad Nashirulloh Aryanto.jpeg";
+import irsyadPhoto from "@/assets/Irsyad Annafi Nurhikmah.jpeg";
+
+import ekaAdvisorPhoto from "@/assets/Eka Maulana, S. T., M. T., M.Eng..jpg";
+import criesAdvisorPhoto from "@/assets/Cries Avian, S.T., M.T., Ph.D..jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -134,7 +145,8 @@ function Nav() {
           ))}
         </nav>
         <a
-          href="#team"
+          href={paperPdf}
+          download
           className="inline-flex items-center gap-1.5 rounded-full bg-accent px-4 py-2 text-sm font-semibold text-accent-foreground shadow-sm transition-transform hover:scale-[1.02]"
         >
           <Download className="h-4 w-4" /> Paper
@@ -183,7 +195,8 @@ function Hero() {
             Explore the Energy System <ArrowRight className="h-4 w-4" />
           </a>
           <a
-            href="#team"
+            href={paperPdf}
+            download
             className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur hover:bg-white/20"
           >
             <Download className="h-4 w-4" /> Download Paper
@@ -738,13 +751,16 @@ function Impact() {
 
 function Team() {
   const team = [
-    "Muhammad Pandu Pradana",
-    "Aina Salsabila",
-    "Fahmy Almaliki Dwi Aditya",
-    "Muhammad Nashirulloh Aryanto",
-    "Irsyad Annafi Nurhikmah",
+    { name: "Muhammad Pandu Pradana", photo: panduPhoto },
+    { name: "Aina Salsabila", photo: ainaPhoto },
+    { name: "Fahmy Almaliki Dwi Aditya", photo: fahmyPhoto },
+    { name: "Muhammad Nashirulloh Aryanto", photo: nashirPhoto },
+    { name: "Irsyad Annafi Nurhikmah", photo: irsyadPhoto },
   ];
-  const advisors = ["Eka Maulana, S.T., M.Eng., M.T", "Cries Avian, S.T., M.T., Ph.D"];
+  const advisors = [
+    { name: "Eka Maulana, S.T., M.Eng., M.T", photo: ekaAdvisorPhoto },
+    { name: "Cries Avian, S.T., M.T., Ph.D", photo: criesAdvisorPhoto },
+  ];
   return (
     <section id="team" className="bg-gradient-to-b from-background to-muted/40 py-24">
       <div className="mx-auto max-w-7xl px-6">
@@ -757,15 +773,20 @@ function Team() {
           <div className="rounded-3xl border border-border bg-card p-8 shadow-sm md:col-span-2">
             <h3 className="text-sm font-bold uppercase tracking-wider text-accent">The Team</h3>
             <div className="mt-5 grid gap-3 sm:grid-cols-2">
-              {team.map((name, i) => (
+              {team.map((member) => (
                 <div
-                  key={name}
+                  key={member.name}
                   className="flex items-center gap-3 rounded-xl border border-border bg-muted/30 p-4"
                 >
-                  <span className="grid h-9 w-9 place-items-center rounded-full bg-primary text-sm font-bold text-primary-foreground">
-                    {i + 1}
-                  </span>
-                  <span className="font-medium">{name}</span>
+                  <img
+                    src={member.photo}
+                    alt={member.name}
+                    width={40}
+                    height={40}
+                    className="h-10 w-10 rounded-full border border-border object-cover"
+                    loading="lazy"
+                  />
+                  <span className="font-medium">{member.name}</span>
                 </div>
               ))}
             </div>
@@ -773,12 +794,20 @@ function Team() {
               Faculty Advisors
             </h3>
             <div className="mt-4 grid gap-3 sm:grid-cols-2">
-              {advisors.map((a) => (
+              {advisors.map((advisor) => (
                 <div
-                  key={a}
-                  className="rounded-xl border border-border bg-secondary/10 p-4 text-sm font-medium"
+                  key={advisor.name}
+                  className="flex items-center gap-3 rounded-xl border border-border bg-secondary/10 p-4"
                 >
-                  {a}
+                  <img
+                    src={advisor.photo}
+                    alt={advisor.name}
+                    width={40}
+                    height={40}
+                    className="h-10 w-10 rounded-full border border-border object-cover"
+                    loading="lazy"
+                  />
+                  <span className="text-sm font-medium">{advisor.name}</span>
                 </div>
               ))}
             </div>
@@ -790,7 +819,8 @@ function Team() {
             </p>
             <div className="mt-6 space-y-3">
               <a
-                href="#"
+                href={paperPdf}
+                download
                 className="flex items-center justify-between rounded-xl bg-white/15 px-4 py-3 text-sm font-semibold backdrop-blur transition-colors hover:bg-white/25"
               >
                 <span className="flex items-center gap-2">
@@ -799,7 +829,8 @@ function Team() {
                 <ChevronRight className="h-4 w-4" />
               </a>
               <a
-                href="#"
+                href={posterImg}
+                download
                 className="flex items-center justify-between rounded-xl bg-white/15 px-4 py-3 text-sm font-semibold backdrop-blur transition-colors hover:bg-white/25"
               >
                 <span className="flex items-center gap-2">
