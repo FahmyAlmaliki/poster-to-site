@@ -839,7 +839,7 @@ function Team() {
                 <ChevronRight className="h-4 w-4" />
               </a>
               <a
-                href="#"
+                href="https://drive.google.com/drive/folders/13AX09B-LT8jMssx_exoVLa7A7wcmyvSk?ths=true"
                 className="flex items-center justify-between rounded-xl bg-accent px-4 py-3 text-sm font-semibold text-accent-foreground transition-transform hover:scale-[1.02]"
               >
                 <span>References</span>
