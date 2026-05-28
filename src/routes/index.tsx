@@ -752,7 +752,7 @@ function Impact() {
 function Team() {
   const team = [
     { name: "Muhammad Pandu Pradana", photo: panduPhoto },
-    { name: "Aina Salsabila", photo: ainaPhoto },
+    { name: "'Aina Salsabila", photo: ainaPhoto },
     { name: "Fahmy Almaliki Dwi Aditya", photo: fahmyPhoto },
     { name: "Muhammad Nashirulloh Aryanto", photo: nashirPhoto },
     { name: "Irsyad Annafi Nurhikmah", photo: irsyadPhoto },
