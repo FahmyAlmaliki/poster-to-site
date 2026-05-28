@@ -9,6 +9,7 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import faviconPng from "../assets/Logo.png?url";
 
 function NotFoundComponent() {
   return (
@@ -80,6 +81,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary" },
     ],
     links: [
+      {
+        rel: "icon",
+        type: "image/png",
+        href: faviconPng,
+      },
       {
         rel: "stylesheet",
         href: appCss,
